@@ -3,6 +3,6 @@ module.exports = {
     dialect:'mysql',
     user:"root",
     passord: "",
-    db: "Company",
+    db: "Empresa",
     port: 3306
 }
