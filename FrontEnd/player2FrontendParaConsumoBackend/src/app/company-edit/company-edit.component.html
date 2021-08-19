@@ -1,0 +1,42 @@
+<h1 class="form-edit">Edição da Empresa</h1>
+<form [formGroup]="updateForm" class="form-edit" (ngSubmit)="updateCompany(updateForm.value)">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Company (disabled)</mat-label>
+      <input matInput disabled value="Google">
+    </mat-form-field>
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Cep</mat-label>
+        <input matInput formControlName="cep" name="cep">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>State</mat-label>
+        <input matInput formControlName="state" name="state">
+      </mat-form-field></td>
+    </tr></table>
+  
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>City</mat-label>
+        <textarea matInput formControlName="city" name="city" placeholder="Ex. 100 Main St" value="{{company.city}}"></textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Street</mat-label>
+        <textarea matInput formControlName="street" name="street"></textarea>
+      </mat-form-field>
+    </p>
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Neighborhood</mat-label>
+        <input matInput formControlName="neighborhood" name="neighborhood" placeholder="Ex. San Francisco" >
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>service</mat-label>
+        <input matInput formControlName="service" name="service" placeholder="Ex. "> 
+      </mat-form-field></td>
+    </tr></table>
+    <button mat-raised-button type="submit" color="primary">Atualizar</button>
+  </form>
+  

@@ -1,0 +1,12 @@
+<div class="cepImput">
+        <div class="errorMsg " *ngIf="errorMsg">
+            <p>{{ errorMsg }}</p>
+        </div>
+        <form [formGroup]="addCompany" (ngSubmit)="getCompany()" class="input-cep-register" fxLayoutAlign="strech" fxLayout="column">
+            <p>Cadastre sua Empresa</p>
+            <mat-form-field>
+                <input name="cep" matInput placeholder="Insira o CEP, e já está!" formControlName="cep">
+            </mat-form-field>
+            <button mat-raised-button type="submit" color="primary">Salvar Empresa</button>
+        </form>
+</div>

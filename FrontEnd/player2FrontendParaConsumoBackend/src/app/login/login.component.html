@@ -1,0 +1,19 @@
+<div fxLayoutAlign="center center" class="main-div">
+    <mat-card fxFlex="25">
+        <mat-toolbar color="primary">Login Page</mat-toolbar>
+        <div class="alert alert-danger error" *ngIf="errorMsg">
+          <p>{{ errorMsg }}</p>
+        </div>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" class="login-form" fxLayoutAlign="strech" fxLayout="column">
+        <mat-form-field>
+          <input matInput placeholder="Email" formControlName="email" type="email" name="email">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Password" formControlName="password" type="password" name="password">
+        </mat-form-field>
+        <button mat-raised-button type="submit" color="primary">Logar</button>
+      </form>
+    </mat-card>
+</div>
+  

@@ -1,0 +1,20 @@
+table{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.btn-delete{
+  color: red;
+}
+tr{
+  padding: 5px;
+}
+td{
+  padding: 20px;
+}
+.session{
+  text-transform: none;
+  text-decoration: none;
+  justify-content: 'center';
+}

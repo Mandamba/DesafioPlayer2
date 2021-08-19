@@ -1,0 +1,33 @@
+<table class="">
+    <div class="session">
+        <a href="" (click)="logout()">Terminar sessão</a>
+    </div>
+    <tr class="bordered">
+        <td>Id</td>
+        <td>Cep</td>
+        <td>State</td>
+        <td>City</td>
+        <td>Street</td>
+        <td>Neighborhood</td>
+        <td>service</td>
+        <td>type</td>
+        <td>latitude</td>
+        <td>longitude</td>
+        <td>Acção Editar</td>
+        <td>Acção Eliminar</td>
+    </tr>
+    <tr *ngFor="let company of empresas.data">
+        <td>{{company.id}}</td>
+        <td>{{company.cep}}</td>
+        <td>{{company.state}}</td>
+        <td>{{company.city}}</td>
+        <td>{{company.street}}</td>
+        <td>{{company.neighborhood}}</td>
+        <td>{{company.service}}</td>
+        <td>{{company.location.type}}</td>
+        <td>{{company.location.latitude}}</td>
+        <td>{{company.location.longitude}}</td>
+        <td><a href="/edit/{{company.id}}"><button class="btn-edit">Editar</button></a></td>
+        <td><a  ><button (click)="delete(company.id)" class="btn-delete">Eliminar</button></a></td>
+    </tr>
+</table>
